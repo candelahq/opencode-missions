@@ -1,6 +1,6 @@
 {
   "name": "opencode-missions",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "OpenCode plugin for multi-step mission orchestration — plan, execute, and validate goals across sessions",
   "type": "module",
   "main": "src/index.ts",
@@ -19,9 +19,15 @@
     "solid-js": "^1.9.12"
   },
   "peerDependenciesMeta": {
-    "@opentui/core": { "optional": true },
-    "@opentui/solid": { "optional": true },
-    "solid-js": { "optional": true }
+    "@opentui/core": {
+      "optional": true
+    },
+    "@opentui/solid": {
+      "optional": true
+    },
+    "solid-js": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@biomejs/biome": "^2.0.0",
