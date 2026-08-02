@@ -1,6 +1,6 @@
-# opencode-missions
+# @candelahq/missions
 
-`opencode-missions` is a companion plugin for OpenCode that enables multi-step autonomous workflows. It provides mission orchestration tools to decompose large goals into smaller milestones, dispatch child sessions to work on them, and validate results across sessions.
+`@candelahq/missions` is a companion plugin for OpenCode that enables multi-step autonomous workflows. It provides mission orchestration tools to decompose large goals into smaller milestones, dispatch child sessions to work on them, and validate results across sessions.
 
 ## Features
 
@@ -9,14 +9,14 @@
 - **Validation:** Define test commands for milestones and validate their completion.
 - **Cross-Session Persistence:** Missions are saved to disk and persist across restarts.
 - **TUI Integration:** A built-in sidebar widget tracks mission progress in the terminal.
-- **Cost Tracking:** Integrates seamlessly with `opencode-candela` for mission-level cost tracking.
+- **Cost Tracking:** Integrates seamlessly with `@candelahq/opencode` for mission-level cost tracking.
 
 ## Installation
 
 Install the plugin in your project workspace:
 
 ```bash
-npm install opencode-missions
+npm install @candelahq/missions
 ```
 
 Register it in your project's `.opencode.json` file:
@@ -24,7 +24,7 @@ Register it in your project's `.opencode.json` file:
 ```json
 {
   "plugins": [
-    "opencode-missions"
+    "@candelahq/missions"
   ]
 }
 ```
@@ -60,9 +60,9 @@ The plugin registers a sidebar widget in OpenCode's TUI that displays the active
 - **Child Sessions:** For each milestone, `mission_next` spawns a temporary child session. This keeps the agent's context window clean and focused on the immediate task.
 - **Milestone State Machine:** Milestones transition through `pending` -> `working` -> `validating` -> `done`/`failed`.
 
-## Integration with opencode-candela
+## Integration with `@candelahq/opencode`
 
-When combined with `opencode-candela`, child sessions spawned by missions automatically inject the `CANDELA_MISSION_ID` environment variable. The Candela plugin maps this to the `X-Mission-Id` HTTP header, enabling grouped cost attribution and tracking for entire multi-step workflows.
+When combined with `@candelahq/opencode`, child sessions spawned by missions automatically inject the `CANDELA_MISSION_ID` environment variable. The Candela plugin maps this to the `X-Mission-Id` HTTP header, enabling grouped cost attribution and tracking for entire multi-step workflows.
 
 ## Configuration
 
