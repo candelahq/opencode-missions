@@ -1,6 +1,6 @@
 {
-  "name": "candela-missions",
-  "version": "0.2.1",
+  "name": "@candelahq/missions",
+  "version": "0.3.0",
   "description": "OpenCode plugin for multi-step mission orchestration — plan, execute, and validate goals across sessions",
   "type": "module",
   "main": "src/index.ts",
